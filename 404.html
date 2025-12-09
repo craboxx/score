@@ -1,9 +1,14 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta charset="utf-8" />
+    <title>Redirecting...</title>
     <script>
-      sessionStorage.redirect = location.href;
-      location.replace("/score/");
+      // Save original route
+      sessionStorage.setItem("redirectPath", window.location.pathname);
+
+      // Redirect to base /score/
+      window.location.replace("/score/");
     </script>
   </head>
   <body></body>
